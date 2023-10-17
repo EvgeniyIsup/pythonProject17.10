@@ -24,10 +24,11 @@
 
 
 with open("некийтекстовый файл.txt","r", encoding = "utf-8") as file:
-    # print(file.read())
+    print(file.read())
+    file.seek(0)
     anyText = file.read()
     digits = list(filter(lambda x: str.isdigit(x), anyText))
     countDigit = len(digits)
-    print(f"колво цифр:{countDigit}")
+    print(f"кол_во цифр:{countDigit}")
 
 
